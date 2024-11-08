@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox - Zadania</title>
+    <style>
+      /* Stylizacje dla kontenera i elementów */
+      .flex-container {
+        display: flex;
+        border: 2px solid #333;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      .flex-item {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 20px;
+        margin: 5px;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .flex-item img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      /* Stylizacje dla sekcji zadań */
+      #zadanie1 .flex-container {
+        /* Układ dla imitacji menu/navbar */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #zadanie2 .flex-container {
+        /* Każdy element elastyczny z różnymi wartościami `flex` */
+      }
+
+      #zadanie2 .flex-item:nth-child(1) {
+        flex: 1;
+      }
+
+      #zadanie2 .flex-item:nth-child(2) {
+        flex: 2;
+      }
+
+      #zadanie2 .flex-item:nth-child(3) {
+        flex: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Zadanie 1: Prosty układ Flexbox (Menu/Navbar)</h2>
+    <p>
+      Kontener flex z elementami imitującymi menu. Można zmieniać
+      <code>flex-direction</code>, <code>justify-content</code>,
+      <code>align-items</code>.
+    </p>
+    <div id="zadanie1" class="flex-container">
+      <button class="flex-item">Główna</button>
+      <button class="flex-item">O stronie</button>
+      <button class="flex-item">Usługi</button>
+      <button class="flex-item">Kontakt</button>
+    </div>
+
+    <h2>Zadanie 2: Elastyczność elementów</h2>
+    <p>
+      Kontener flex z elastycznymi elementami i obrazkami. Wartości
+      <code>flex</code> ustawione na różne wartości.
+    </p>
+    <div id="zadanie2" class="flex-container">
+      <div class="flex-item">
+        Element 1<br />Opis elastyczności
+        <img src="https://via.placeholder.com/150" alt="Obrazek 1" />
+      </div>
+      <div class="flex-item">
+        Element 2<br />Większa elastyczność
+        <img src="https://via.placeholder.com/150" alt="Obrazek 2" />
+      </div>
+      <div class="flex-item">
+        Element 3<br />Największa elastyczność
+        <img src="https://via.placeholder.com/150" alt="Obrazek 3" />
+      </div>
+    </div>
+  </body>
+</html>
